@@ -3,6 +3,11 @@
 Une page de connexion moderne et réactive, construite avec des composants d’interface utilisateur avancés et des validations côté client.
 Un dashboard simple a également été ajouté après la connexion, pour simuler une navigation authentifiée.
 
+**La page est accessible temporairement via un lien ngrok : https://10377b010d76.ngrok-free.app**
+
+![Screen 1](./screen/screen1.png)
+![Screen 2](./screen/screen2.png)
+
 ## Fonctionnalités :
 
 - **Connexion via e-mail et mot de passe**
