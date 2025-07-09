@@ -1,4 +1,4 @@
-# Login Page
+# FrontPage
 
 Une page de connexion moderne et réactive, construite avec des composants d’interface utilisateur avancés et des validations côté client.
 Un dashboard simple a également été ajouté après la connexion, pour simuler une navigation authentifiée.
