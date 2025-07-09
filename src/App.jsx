@@ -3,6 +3,10 @@ import Dashboard from "./dashboard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
+  {
+    /*Gérer les différentes routes de l'appli via react router*/
+  }
+
   return (
     <Router>
       <Routes>

@@ -29,6 +29,7 @@ export default function LoginCard() {
     setShowPassword(!showPassword);
   };
 
+  // Check les informations via les input mis à jour
   const checkData = (event) => {
     event.preventDefault();
     setSubmitted(true);

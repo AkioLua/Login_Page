@@ -20,6 +20,7 @@ export default function Dashboard() {
   const [popUp, setPopUp] = useState(true);
   const [visible, setVisible] = useState(true);
 
+  // effet pop up alerte fade
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(false);
@@ -30,6 +31,7 @@ export default function Dashboard() {
 
   return (
     <>
+      {/*Effet pop up*/}
       {popUp && (
         <div
           className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-opacity duration-500 ${
@@ -39,6 +41,8 @@ export default function Dashboard() {
           <AlertSuccess />
         </div>
       )}
+
+      {/*Dashboard fait via l'api UI de ShadCN*/}
       <SidebarProvider>
         <AppSidebar />
         <SidebarInset className="bg-gradient-to-br from-slate-50 to-lime-400">
@@ -49,6 +53,7 @@ export default function Dashboard() {
                 orientation="vertical"
                 className="mr-2 data-[orientation=vertical]:h-4"
               />
+              {/*Suivi des pages dans le dashboard*/}
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem className="hidden md:block">
@@ -64,6 +69,7 @@ export default function Dashboard() {
               </Breadcrumb>
             </div>
           </header>
+          {/*élément principale à affchier dans le dashboard*/}
           <div className="flex flex-1 flex-col gap-4 p-4 pt-0 ">
             <div className="grid auto-rows-min gap-4 md:grid-cols-3">
               <div className="bg-muted/50 aspect-video rounded-xl" />
