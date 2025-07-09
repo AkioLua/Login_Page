@@ -1,6 +1,7 @@
 # Login Page
 
 Une page de connexion moderne et réactive, construite avec des composants d’interface utilisateur avancés et des validations côté client.
+Un dashboard simple a également été ajouté après la connexion, pour simuler une navigation authentifiée.
 
 ## Fonctionnalités :
 
@@ -8,6 +9,7 @@ Une page de connexion moderne et réactive, construite avec des composants d’i
 - **Connexion avec Google** (simple redirection vers le site de google partie front)
 - **Validation de mot de passe et e-mail** avec une **regex**
 - **Case à cocher** obligatoire pour accepter les **conditions d'utilisation**
+- **Dashboard** minimaliste accessible après authentification
 - Interface construite avec la librairie **[shadcn/ui](https://ui.shadcn.com)**
 
 ## Technologies utilisées :
