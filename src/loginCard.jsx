@@ -13,6 +13,7 @@ import { Label } from "@/components/ui/label";
 import { EyeIcon, EyeOffIcon, LockIcon, MailIcon } from "lucide-react";
 import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginCard() {
   const [email, setEmail] = useState("");
@@ -22,23 +23,29 @@ export default function LoginCard() {
   const [showPassword, setShowPassword] = useState(false);
   const [checkbox, setCheckbox] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
   const checkData = (event) => {
-    setSubmitted(true);
     event.preventDefault();
+    setSubmitted(true);
     setEmailError(!/[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z0-9]+/.test(email));
     setPasswordError(!/.{8,}/.test(password));
 
-    console.log(passwordError);
+    if (!emailError && !passwordError && checkbox) {
+      navigate("/dashboard");
+      console.log("Submited - all good");
+    } else {
+      console.log("Error on submit");
+    }
   };
 
   return (
     <form
-      className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-lime-700 to-lime-200 px-4"
+      className="min-h-screen flex items-center justify-center "
       onSubmit={checkData}
     >
       <div class="w-full max-w-sm bg-lime-200 rounded-xl shadow-lg md:w-1/2 transform duration-700 hover:translate-x-2 hover:-translate-y-2 pointer-events-none">
